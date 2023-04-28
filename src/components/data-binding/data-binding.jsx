@@ -1,6 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import $ from "jquery";
 
 function Databinging() {
+  useEffect(() => {
+    axios
+      .get("https://fakestoreapi.com/products")
+      .then((response) => console.log(response));
+
+    $.ajax({
+      method: "get",
+      url: "https://fakestoreapi.com/products",
+      success: (data) => {
+        console.log(data);
+      },
+      error: (err) => {
+        console.log(err.status);
+      },
+    });
+  }, []);
+
   const [details, setDetails] = useState({
     Product: "",
     Price: 0,
