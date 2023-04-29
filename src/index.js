@@ -3,12 +3,13 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import Databinging from "./components/data-binding/data-binding";
+// import Databinging from "./components/data-binding/data-binding";
+import InlineStyle from "./components/style-binding/InlineStyle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Databinging />
+    <InlineStyle />
   </React.StrictMode>
 );
 
