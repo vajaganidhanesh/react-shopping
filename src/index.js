@@ -3,14 +3,15 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 // import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import ClassBinding from "./components/style-binding/classBinding";
+// import ClassBinding from "./components/style-binding/classBinding";
+import EventBinding from "./components/event-binding/EventBinding";
 // import Databinging from "./components/data-binding/data-binding";
 // import InlineStyle from "./components/style-binding/InlineStyle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ClassBinding />
+    <EventBinding />
   </React.StrictMode>
 );
 
