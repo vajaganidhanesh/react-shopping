@@ -14,6 +14,17 @@ function EventBinding() {
       document.write(`${property} : ${typeof e[property]} <br>`);
     }
   }
+
+  // Rest parameters to handle multiple arugments in functions
+  function restArguments(...args) {
+    let [data, data2] = args;
+    document.write(`${data} <br> ${data2.Name}`);
+  }
+
+  function spreadArguments(msg, data) {
+    document.write(`${msg} <br> ${data.Name}`);
+  }
+
   return (
     <div>
       <div className="container">
@@ -22,9 +33,29 @@ function EventBinding() {
           id="btnInsert"
           name="clickButton"
           value={23}
-          onClick={InsertClick}
+          onClick={(e) => {
+            InsertClick(e);
+          }}
         >
           Click
+        </button>
+
+        <button
+          className="ms-2"
+          onClick={() => {
+            restArguments("welcome", { Name: "Samsung TV" });
+          }}
+        >
+          Rest Click
+        </button>
+
+        <button
+          className="ms-2"
+          onClick={() => {
+            spreadArguments(...["welcome", { Name: "Samsung TV" }]);
+          }}
+        >
+          Spread Click
         </button>
       </div>
     </div>
