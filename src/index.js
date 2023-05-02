@@ -5,14 +5,15 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 // import ClassBinding from "./components/style-binding/classBinding";
 // import EventBinding from "./components/event-binding/EventBinding";
-import RealTime from "./components/event-binding/realTime";
+// import RealTime from "./components/event-binding/realTime";
+import Scrolling from "./components/event-binding/scrolling";
 // import Databinging from "./components/data-binding/data-binding";
 // import InlineStyle from "./components/style-binding/InlineStyle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <RealTime />
+    <Scrolling />
   </React.StrictMode>
 );
 
