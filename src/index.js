@@ -7,14 +7,15 @@ import reportWebVitals from "./reportWebVitals";
 // import EventBinding from "./components/event-binding/EventBinding";
 // import RealTime from "./components/event-binding/realTime";
 // import Scrolling from "./components/event-binding/scrolling";
-import KeyEvents from "./components/key-events/KeyEvents";
+// import KeyEvents from "./components/key-events/KeyEvents";
+import Validations from "./components/key-events/Validations";
 // import Databinging from "./components/data-binding/data-binding";
 // import InlineStyle from "./components/style-binding/InlineStyle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <KeyEvents />
+    <Validations />
   </React.StrictMode>
 );
 
