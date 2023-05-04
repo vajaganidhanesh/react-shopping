@@ -57,6 +57,9 @@ function Validations() {
       setMobileError(`Invalid Mobile - ${placeholder}`);
     }
   }
+  function windowOpen() {
+    window.open("assets/phone-1.png", "mobile", "width=400 height=400");
+  }
 
   return (
     <div className="container">
@@ -100,6 +103,9 @@ function Validations() {
             onClick={handleSubmitClick}
           >
             Submit
+          </button>
+          <button className="btn btn-primary" onDoubleClick={windowOpen}>
+            doubleClickToOpenImage
           </button>
         </dd>
       </dl>
