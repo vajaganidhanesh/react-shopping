@@ -14,7 +14,7 @@ export function ClipBoard() {
   const [status, setstatus] = useState(1);
   const [loader, setLoader] = useState({ display: "none" });
   const [img, setImg] = useState({ display: "none" });
-
+  const [progress, setProgress] = useState(1);
   // function handleCut() {
   //   setMsg("Removed - Copied to clipboard");
   // }
@@ -47,6 +47,7 @@ export function ClipBoard() {
       setLoader({ display: "none" });
     } else {
       count++;
+      setProgress(count);
       setstatus(count);
     }
   }
@@ -87,7 +88,8 @@ export function ClipBoard() {
         <div className="col d-flex justify-content-center align-items-center flex-column">
           <img style={img} src="assets/phone-1.png" alt="" />
           <div style={loader}>
-            <div className="spinner-border"></div>
+            {/* <div className="spinner-border"></div> */}
+            <progress min="1" max="100" value={progress}></progress>
             <p>{status} %</p>
             <p>loading...</p>
           </div>

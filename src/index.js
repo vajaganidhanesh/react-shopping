@@ -9,14 +9,15 @@ import reportWebVitals from "./reportWebVitals";
 // import Scrolling from "./components/event-binding/scrolling";
 // import KeyEvents from "./components/key-events/KeyEvents";
 // import Validations from "./components/key-events/Validations";
-import { ClipBoard } from "./components/clipboardEvents/ClipBoard";
+// import { ClipBoard } from "./components/clipboardEvents/ClipBoard";
+import Home from "./components/Home/Home";
 // import Databinging from "./components/data-binding/data-binding";
 // import InlineStyle from "./components/style-binding/InlineStyle";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ClipBoard />
+    <Home />
   </React.StrictMode>
 );
 
