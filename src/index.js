@@ -10,14 +10,16 @@ import reportWebVitals from "./reportWebVitals";
 // import KeyEvents from "./components/key-events/KeyEvents";
 // import Validations from "./components/key-events/Validations";
 // import { ClipBoard } from "./components/clipboardEvents/ClipBoard";
-import Home from "./components/Home/Home";
+// import Home from "./components/Home/Home";
 // import Databinging from "./components/data-binding/data-binding";
 // import InlineStyle from "./components/style-binding/InlineStyle";
+
+import Grid from "./components/grid/grid";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Home />
+    <Grid />
   </React.StrictMode>
 );
 
