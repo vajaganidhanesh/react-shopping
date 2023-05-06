@@ -4,6 +4,7 @@ function CustomizedGrid(props) {
   return (
     <div className="container-fluid">
       <div className="row d-flex justify-content-center align-items-center">
+        <h3 className="text-center">{props.title}</h3>
         <table className="table table-dark w-50">
           <thead>
             <tr>
