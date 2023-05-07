@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Select Bank App Version</h2>
+    <select id="lstVersions">
+      <option value="-1">Select Version</option>
+      <option value="ver1">Version-1</option>
+      <option value="ver2">Version-2</option>
+      <option value="ver3">Version-3</option>
+    </select>
+    <button onclick="InstallClick()">install</button>
+
+    <script>
+      class HDFC_Bank_Version1 {
+        Personal = "Personal Banking Services";
+        NRI = "NRI Banking Services";
+        Print() {
+          document.write(`${this.Personal}<br> ${this.NRI}<br>`);
+        }
+      }
+      class HDFC_Bank_Version2 extends HDFC_Bank_Version1 {
+        Loans = "Personal and Housing Loans";
+        Print() {
+          super.Print();
+          document.write(`${this.Loans} <br>`);
+        }
+      }
+      class HDFC_Bank_Version3 extends HDFC_Bank_Version2 {
+        AGRI = "Government Schemes";
+        Print() {
+          super.Print();
+          document.write(`${this.AGRI} <br>`);
+        }
+      }
+      function InstallClick() {
+        var id = document.getElementById("lstVersions").value;
+        switch (id) {
+          case "ver1":
+            var obj1 = new HDFC_Bank_Version1();
+            document.write("<h2>You Installed Version-1</h2>");
+            obj1.Print();
+            break;
+          case "ver2":
+            var obj2 = new HDFC_Bank_Version2();
+            document.write("<h2>You Installed Version-2</h2>");
+            obj2.Print();
+            break;
+          case "ver3":
+            var obj3 = new HDFC_Bank_Version3();
+            document.write("<h2>You Installed Version-3</h2>");
+            obj3.Print();
+            break;
+          default:
+            document.write("<h2>Please select a version</h2>");
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>
