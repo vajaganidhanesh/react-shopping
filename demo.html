@@ -1,0 +1,30 @@
+<!-- this file includes all concepts related to 'Class' in JavaScript -->
+
+<script>
+  var username = prompt("enter name");
+  var role = prompt("enter role");
+  var address = prompt("enter details");
+  class ProductDetails {
+    product = "Samsung TV";
+    price = 25000;
+    address = "";
+    get customerAdress() {
+      return this.address;
+    }
+    set customerAdress(customerAdress) {
+      if (role == "customer") {
+        this.address = customerAdress;
+      } else {
+        document.write(
+          `Hello! ${username} - unable add details to your details`
+        );
+      }
+    }
+  }
+
+  let customer = new ProductDetails();
+  customer.customerAdress = address;
+  if (customer.customerAdress) {
+    document.write(`${customer.customerAdress}`);
+  }
+</script>
