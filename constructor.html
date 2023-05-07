@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="insert()">Insert</button>
+    <button onclick="deleted()">Delete</button>
+    <button>Update</button>
+    <script>
+      class DataBase {
+        constructor() {
+          document.write(`connected to database <br/>`);
+        }
+
+        Insert() {
+          document.write("model inserted");
+        }
+        Updated() {
+          document.write("model updated");
+        }
+        Deleted() {
+          document.write("model deleted");
+        }
+      }
+
+      function insert() {
+        let obj = new DataBase();
+        obj.Insert();
+      }
+      function deleted() {
+        let obj = new DataBase();
+        obj.Deleted();
+      }
+      function updated() {
+        let obj = new DataBase();
+        obj.Updated();
+      }
+    </script>
+  </body>
+</html>
