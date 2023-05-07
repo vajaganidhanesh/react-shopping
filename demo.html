@@ -8,6 +8,19 @@
     product = "Samsung TV";
     price = 25000;
     address = "";
+
+    data = {
+      skills: {
+        frontend: "html,css,js",
+      },
+      passion: {
+        sports: "cricket volleyball batmeniton",
+      },
+    };
+    get skills() {
+      return this.data.skills.frontend;
+    }
+
     get customerAdress() {
       return this.address;
     }
@@ -25,6 +38,7 @@
   let customer = new ProductDetails();
   customer.customerAdress = address;
   if (customer.customerAdress) {
-    document.write(`${customer.customerAdress}`);
+    document.write(`${customer.customerAdress} <br>`);
   }
+  document.write(`${customer.skills}`);
 </script>
