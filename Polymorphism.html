@@ -42,6 +42,11 @@
     }
   }
 
+  class Base {}
+  class Dervied {}
+  obj = new Dervied();
+  obj = new Base();
+
   var Employees = new Array(new Developer(), new Admin(), new Manager());
   var designation = prompt("enter role");
   for (var employee of Employees) {

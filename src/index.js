@@ -14,12 +14,13 @@ import reportWebVitals from "./reportWebVitals";
 // import Databinging from "./components/data-binding/data-binding";
 // import InlineStyle from "./components/style-binding/InlineStyle";
 
-import Grid from "./components/grid/grid";
+// import Grid from "./components/grid/grid";
+import Logincomponent from "./components/classComponents/login.component";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Grid />
+    <Logincomponent />
   </React.StrictMode>
 );
 
