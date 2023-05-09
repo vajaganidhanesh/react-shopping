@@ -6,8 +6,15 @@ export default class Logincomponent extends Component {
     this.state = {
       title: "welcome to class components",
       components: ["dhanesh", "vajagani", "hello"],
+      productData: {
+        Name: "",
+        Price: 0,
+        City: "",
+        Stock: false,
+      },
     };
     this.updateState = this.updateState.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleClick(event) {
@@ -26,10 +33,25 @@ export default class Logincomponent extends Component {
     });
   }
 
+  handleChange(e) {
+    const { id, value, type, checked } = e.target;
+    const inputValue = type === "checkbox" ? checked : value;
+    this.setState((prevState) => ({
+      productData: {
+        ...prevState.productData,
+        [id]: inputValue,
+      },
+    }));
+    console.log(this.state.productData);
+  }
+  handleSubmitData() {
+    console.log(this.state.productData);
+  }
+
   render() {
     return (
       <>
-        <div>{this.state.title}</div>
+        {/* <div>{this.state.title}</div>
         <ol>
           {this.state.components.map((values) => (
             <div key={values}>{values}</div>
@@ -44,7 +66,70 @@ export default class Logincomponent extends Component {
         </button>
         <button onClick={() => this.updateState()} className="btn btn-success">
           update
-        </button>
+        </button> */}
+
+        <div className="container-fluid">
+          <div className="row">
+            <dl className="col-6">
+              <dt>Enter Name</dt>
+              <dd>
+                <input
+                  type="text"
+                  name="Name"
+                  id="Name"
+                  onChange={this.handleChange.bind(this)}
+                  defaultValue={this.state.productData.Name}
+                />
+              </dd>
+              <dt>Enter Price</dt>
+              <dd>
+                <input
+                  type="number"
+                  name="Price"
+                  id="Price"
+                  defaultValue={this.state.productData.Price}
+                  onChange={this.handleChange.bind(this)}
+                />
+              </dd>
+              <dt>Stock</dt>
+              <dd className="form-check-label">
+                <input
+                  type="checkbox"
+                  name=""
+                  id="Stock"
+                  onChange={this.handleChange.bind(this)}
+                />
+              </dd>
+              <dt>Select City</dt>
+              <dd>
+                <select
+                  name="City"
+                  id="City"
+                  onChange={this.handleChange.bind(this)}
+                  defaultValue={this.state.productData.City}
+                >
+                  <option value="Hyderabad">Hyderabad</option>
+                  <option value="Bangalore">Bangalore</option>
+                </select>
+              </dd>
+              <button className="btn btn-primary">Submit Details</button>
+            </dl>
+            <dl className="col-6">
+              <dt>ProductName</dt>
+              <dd>{this.state.productData.Name}</dd>
+              <dt>Price</dt>
+              <dd>{this.state.productData.Price} </dd>
+              <dt>City</dt>
+              <dd>{this.state.productData.City} </dd>
+              <dt>Stock</dt>
+              <dd>
+                {this.state.productData.Stock === true
+                  ? "stock available"
+                  : "out of stock"}{" "}
+              </dd>
+            </dl>
+          </div>
+        </div>
       </>
     );
   }

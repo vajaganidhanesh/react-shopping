@@ -15,12 +15,14 @@ import reportWebVitals from "./reportWebVitals";
 // import InlineStyle from "./components/style-binding/InlineStyle";
 
 // import Grid from "./components/grid/grid";
-import Logincomponent from "./components/classComponents/login.component";
+// import MyForm from "./components/classComponents/Form";
+// import Logincomponent from "./components/classComponents/login.component";
+import FakeStore from "./components/classComponents/FakeStore";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Logincomponent />
+    <FakeStore />
   </React.StrictMode>
 );
 
