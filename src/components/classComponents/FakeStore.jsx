@@ -26,7 +26,7 @@ export default class FakeStore extends Component {
         {
           // eslint-disable-next-line array-callback-return
           this.state.products.map((values) => {
-            return <p key={values}>{values.title}</p>;
+            return <p key={values.id}>{values.title}</p>;
           })
         }
       </div>

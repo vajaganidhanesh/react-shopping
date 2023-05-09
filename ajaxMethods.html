@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajax Document</title>
+    <!-- <link rel="stylesheet" href="./node_modules/jquery/dist/jquery.js" /> -->
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script>
+      $(function () {
+        $("button").click(() => {
+          $.ajax({
+            method: "get",
+            url: "about.txt",
+            success: (data) => {
+              console.log(data);
+              $("p").html(data);
+            },
+          });
+        });
+      })
+        .ajaxStart(() => {
+          alert("Your Request for about");
+        })
+        .ajaxSuccess(() => {
+          alert("Your Request processed successfully");
+        })
+        .ajaxComplete(() => {
+          alert("Your Request for about completed");
+        })
+        .ajaxStop(() => {
+          alert("Your about data is ready to display");
+        });
+    </script>
+  </head>
+  <body>
+    <button>Load</button>
+    <p></p>
+  </body>
+</html>
