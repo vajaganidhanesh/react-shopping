@@ -17,12 +17,14 @@ import reportWebVitals from "./reportWebVitals";
 // import Grid from "./components/grid/grid";
 // import MyForm from "./components/classComponents/Form";
 // import Logincomponent from "./components/classComponents/login.component";
-import FakeStore from "./components/classComponents/FakeStore";
+// import FakeStore from "./components/classComponents/FakeStore";
+// import Practic from "./components/Practic";
+import PureClassComponent from "./components/classComponents/PureComponent";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <FakeStore />
+    <PureClassComponent />
   </React.StrictMode>
 );
 
