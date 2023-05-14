@@ -1,4 +1,6 @@
 import React, { PureComponent } from "react";
+import Properties from "./Properties";
+import { Navigation } from "./ConditionalRender";
 
 export default class PureClassComponent extends PureComponent {
   constructor() {
@@ -29,6 +31,8 @@ export default class PureClassComponent extends PureComponent {
         >
           click
         </button>
+        <Properties title="dhanesh" />
+        <Navigation />
       </div>
     );
   }
