@@ -20,12 +20,13 @@ import reportWebVitals from "./reportWebVitals";
 // import FakeStore from "./components/classComponents/FakeStore";
 // import Practic from "./components/Practic";
 // import PureClassComponent from "./components/classComponents/PureComponent";
-import FormDataComponent from "./components/form-components/FormData";
+// import FormDataComponent from "./components/form-components/FormData";
+import FormikComponent from "./components/formikcomponent/Formik";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <FormDataComponent />
+    <FormikComponent />
   </React.StrictMode>
 );
 
