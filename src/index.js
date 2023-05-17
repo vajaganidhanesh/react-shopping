@@ -19,12 +19,13 @@ import reportWebVitals from "./reportWebVitals";
 // import Logincomponent from "./components/classComponents/login.component";
 // import FakeStore from "./components/classComponents/FakeStore";
 // import Practic from "./components/Practic";
-import PureClassComponent from "./components/classComponents/PureComponent";
+// import PureClassComponent from "./components/classComponents/PureComponent";
+import FormDataComponent from "./components/form-components/FormData";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <PureClassComponent />
+    <FormDataComponent />
   </React.StrictMode>
 );
 
