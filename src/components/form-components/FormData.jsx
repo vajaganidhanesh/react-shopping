@@ -33,7 +33,8 @@ function FormDataComponent() {
       cityError:
         id === "City" && value.trim() === "-1" ? "City is required." : "",
       phoneError:
-        id === "phoneNumber" && (value === "" || isNaN(value))
+        id === "phoneNumber" &&
+        (!value.match(/\+91\d{10}/) || isNaN(value) || value === "")
           ? "Invalid phone number."
           : "",
       StockError: id === "Stock" && !checked ? "Stock must be selected." : "",
@@ -54,7 +55,7 @@ function FormDataComponent() {
               value={userName}
             />
           </dd>
-          <dd>{error.nameError} </dd>
+          <dd className="text-danger">{error.nameError} </dd>
           <dt>Phone Number</dt>
           <dd>
             <input
@@ -65,7 +66,7 @@ function FormDataComponent() {
               onChange={onchange}
             />
           </dd>
-          <dd>{error.phoneError} </dd>
+          <dd className="text-danger">{error.phoneError} </dd>
           <dt>City</dt>
           <dd>
             <select name="City" id="City" onChange={onchange} value={City}>
@@ -74,7 +75,7 @@ function FormDataComponent() {
               <option value="Bangalore">Bangalore</option>
             </select>
           </dd>
-          <dd>{error.cityError} </dd>
+          <dd className="text-danger">{error.cityError} </dd>
           <dt>Stock</dt>
           <dd className=" form-check">
             <input
@@ -86,7 +87,7 @@ function FormDataComponent() {
               onChange={onchange}
             />
           </dd>
-          <dd>{error.StockError} </dd>
+          <dd className="text-danger">{error.StockError} </dd>
           <button>submit</button>
         </dl>
       </form>
