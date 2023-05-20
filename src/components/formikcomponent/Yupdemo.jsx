@@ -11,7 +11,7 @@ function Yupdemo() {
       Mobile: "",
     },
     onSubmit: (values) => {
-      console.log(values);
+      alert(JSON.stringify(values));
     },
     validationSchema: yup.object({
       UserName: yup
@@ -20,7 +20,11 @@ function Yupdemo() {
         .min(3, "Name too short")
         .max(10, "Name too long.."),
       Age: yup.number().required("Age should be a number"),
-      Mobile: yup.string(),
+      Mobile: yup
+        .string()
+        .required("Should be a number")
+        .matches(/\+91\d{10}/, " Invalid Mobile +91 with 10 digits"),
+      // city :yu
     }),
   });
   return (
@@ -30,9 +34,13 @@ function Yupdemo() {
         <dl>
           <dt>UserName</dt>
           <dd>
-            <input type="text" name="UserName" onChange={formik.handleChange} />
+            <input
+              type="text"
+              name="UserName"
+              {...formik.getFieldProps("UserName")}
+            />
           </dd>
-          <dd className="text-danger"> </dd>
+          <dd className="text-danger">{formik.errors.UserName} </dd>
           <dt>Age</dt>
           <dd>
             <input
@@ -41,6 +49,7 @@ function Yupdemo() {
               id=""
               onChange={formik.handleChange}
             />
+            <dd className="text-danger">{formik.errors.Age} </dd>
           </dd>
           <dd className="text-danger"> </dd>
           <dt>City</dt>
@@ -61,6 +70,8 @@ function Yupdemo() {
               onChange={formik.handleChange}
             />
           </dd>
+          <dd className="text-danger">{formik.errors.Mobile} </dd>
+
           <dd className="text-danger"></dd>
           <button className="btn btn-primary">submit</button>
         </dl>

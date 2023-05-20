@@ -22,12 +22,13 @@ import reportWebVitals from "./reportWebVitals";
 // import PureClassComponent from "./components/classComponents/PureComponent";
 // import FormDataComponent from "./components/form-components/FormData";
 // import FormikComponent from "./components/formikcomponent/Formik";
-import Yupdemo from "./components/formikcomponent/Yupdemo";
+// import Yupdemo from "./components/formikcomponent/Yupdemo";
+import FormikForm from "./components/formikcomponent/FormikForm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Yupdemo />
+    <FormikForm />
   </React.StrictMode>
 );
 
