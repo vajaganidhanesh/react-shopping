@@ -23,12 +23,13 @@ import reportWebVitals from "./reportWebVitals";
 // import FormDataComponent from "./components/form-components/FormData";
 // import FormikComponent from "./components/formikcomponent/Formik";
 // import Yupdemo from "./components/formikcomponent/Yupdemo";
-import FormikForm from "./components/formikcomponent/FormikForm";
+// import FormikForm from "./components/formikcomponent/FormikForm";
+import Shopping from "./components/routing-spa/Shopping";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <FormikForm />
+    <Shopping />
   </React.StrictMode>
 );
 
