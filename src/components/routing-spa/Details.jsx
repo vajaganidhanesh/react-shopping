@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function Details() {
   const [details, setDetails] = useState({
@@ -39,7 +39,7 @@ function Details() {
           <img src={details.image} alt="" className="img-fluid" />
         </div>
       </div>
-      <Link to={`/products/${details.category}`}>Back to Products</Link>
+      {/* <Link to={`/products/${details.category}`}>Back to Products</Link> */}
     </div>
   );
 }
