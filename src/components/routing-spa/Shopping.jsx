@@ -25,8 +25,9 @@ function Shopping() {
       </div>
       <Routes>
         <Route path="" element={<ShoppingHome />} />
-        <Route path="products/:catName" element={<Products />} />
-        <Route path="details/:productId" element={<Details />} />
+        <Route path="products/:catName" element={<Products />}>
+          <Route path="details/:productId" element={<Details />} />
+        </Route>
         <Route path="*" element={<Unmatched />} />
       </Routes>
     </BrowserRouter>
