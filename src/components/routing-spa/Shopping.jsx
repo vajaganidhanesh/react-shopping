@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ShoppingHome from "./ShoppingHome";
 import Products from "./Products";
 import Details from "./Details";
+import Unmatched from "./Unmatched";
 
 function Shopping() {
   return (
@@ -26,6 +27,7 @@ function Shopping() {
         <Route path="" element={<ShoppingHome />} />
         <Route path="products/:catName" element={<Products />} />
         <Route path="details/:productId" element={<Details />} />
+        <Route path="*" element={<Unmatched />} />
       </Routes>
     </BrowserRouter>
   );
