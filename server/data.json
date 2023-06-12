@@ -1,0 +1,10 @@
+[
+  {
+    "UserName": "JohnDoe",
+    "UserId": "12345",
+    "Age": 30,
+    "Email": "johndoe@example.com",
+    "Mobile": "1234567890",
+    "Password": "secretpassword"
+  }
+]

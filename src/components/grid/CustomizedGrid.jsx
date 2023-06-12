@@ -1,4 +1,5 @@
 import React from "react";
+// import PropTypes from 'prop-types'
 
 function CustomizedGrid(props) {
   return (
@@ -27,5 +28,6 @@ function CustomizedGrid(props) {
     </div>
   );
 }
+
 
 export default CustomizedGrid;
